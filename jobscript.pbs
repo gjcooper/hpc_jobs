@@ -1,0 +1,21 @@
+#!/bin/bash
+# Request resources
+# * 10 minutes wall time to run
+#PBS -l walltime=00:10:00
+# * 1 node, 1 processor
+# * 100 megabytes physical memory allocated to job
+#PBS -l select=1:ncpus=1:mem=100mb
+# Specify a project code (for accounting)
+#PBS -P a40
+# Set email address
+#PBS -M nobody@intersect.org.au
+# Send an email when jobs
+# begins (b), gets aborted (a)
+# and ends (e)
+#PBS -m abe
+# Move to directory job was submitted in
+cd $PBS_O_WORKDIR
+# Specify the job to be done
+date
+sleep 60
+date
