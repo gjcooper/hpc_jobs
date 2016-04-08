@@ -16,6 +16,13 @@
 # Move to directory job was submitted in
 cd $PBS_O_WORKDIR
 # Specify the job to be done
+
+wget https://raw.github.com/IntersectAustralia/TrainingMaterials/master/IntroToUnixHPC/70_text_strings.txt
+source /usr/share/modules/init/bash
+
+module load clustalw
+
+clustalw2 -INFILE=70_text_strings.txt -PWMATRIX=BLOSUM -PWGAPOPEN=1000
 date
 sleep 60
 date
